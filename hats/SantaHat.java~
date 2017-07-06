@@ -1,0 +1,16 @@
+/**
+ * This class creates a Hat that looks like a SantaHat.
+ * @author Cindy Lian
+ * @author Jennifer Cai
+ * @version 4.0, June 10, 2013
+ */
+public class SantaHat extends Hat
+{ 
+  /**
+   * Creates a Hat with the SantaHat image
+   */
+  public SantaHat()
+  {
+    super("Images/Game Images/hats/santahat.png");
+  }
+}

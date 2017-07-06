@@ -1,0 +1,109 @@
+package hats3.data;
+
+import hats3.Happy;
+
+import javax.swing.*;
+import java.awt.geom.Rectangle2D;
+/**
+ * This class creates the timer class which runs at the same time as the game.
+ * @author Cindy Lian
+ * @author Jennifer Cai
+ * @version 4.0, June 10, 2013
+ */
+public class Timer extends Thread
+{
+  /**
+   * time - private int - Stores the time in the game.
+   */
+  private int time;
+  /**
+   * rectangle - private Rectangle2D.Double - Stores the rectangle time bar that is drawn.
+   */
+  private Rectangle2D.Double rectangle = new Rectangle2D.Double(540,435, time/2, 5);
+  /**
+   * j - private JLabel - Stores the JLabel of the Integer time.
+   */
+  private JLabel j = new JLabel(Integer.toString(time));
+  
+  /**
+   * Creates the timer and initializes time to 180.
+   */
+  public Timer ()
+  {
+    time = 180;
+  }
+  
+  /**
+   * Returns the rectangle time bar.
+   * @return Rectangle2D.Double rectangle of the time bar.
+   */
+  public Rectangle2D.Double getRect()
+  {
+    return rectangle;
+  }
+  
+  /**
+   * Returns the JLabel drawing the number time.
+   * @return JLabel of integer time.
+   */
+  public JLabel getLabel()
+  {
+    return j;
+  }
+  
+  /**
+   * Returns the time left.
+   * @return int time left in game.
+   */
+  public int getTime ()
+  {
+    return time;
+  }
+  
+  /**
+   * Adds int t parameter time to the time variable.
+   * @param t int to be added to time
+   */
+  public void setTime (int t)
+  {
+    if (time + t >= 180)
+      time = 180;
+    else
+      time = time + t;
+  }
+  
+  /**
+   * Decreases the time by 1 every 1 second.
+   * The do/while loop continues until time = 0. If the game is paused, the loop pauses until paused = false again.
+   * @exception InterruptedException for Thread.sleep.
+   */
+  public void drawTime ()
+  {
+    do
+    {
+      try
+      {
+        Thread.sleep (1000);
+      }
+      catch (InterruptedException e)
+      {
+      }
+      while (Happy.paused == true)
+      {
+      }
+      time--;
+      j.setText(Integer.toString(time));
+      rectangle.width = time/2;
+    }
+    while(time!=0);
+  }
+  
+  /**
+   * Runs the drawTime () method.
+   */
+  public void run ()
+  {
+    drawTime ();
+  }
+  
+}

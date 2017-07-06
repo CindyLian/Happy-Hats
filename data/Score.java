@@ -1,0 +1,91 @@
+package hats3.data;
+
+/**
+ * This program creates the hat game. It extends JPanel, and is used in HappyHatsMain.
+ * @author Jennifer Cai
+ * @author Cindy Lian
+ * @version 4.0, June 10, 2013
+ */
+public class Score 
+{
+  /**
+   * name - String - Stores name of the score.
+   */
+  private String name;
+  /**
+   * score - int - Stores score of the score.
+   */
+  private int score;
+  /**
+   * level - int - Stores level of the score.
+   */
+  private int level;
+  
+  /**
+   * Creates the score class and sets class variables.
+   * @param n String
+   * @param s int
+   * @param l int
+   */
+  public Score (String n, int s, int l)
+  {
+    name = n;
+    score = s;
+    level = l;
+  }
+  
+  /**
+   * Returns the name.
+   * @return String name
+   */
+  public String getName ()
+  {
+    return name;
+  }
+  
+  /**
+   * Returns the score.
+   * @return int score
+   */
+  public int getScore ()
+  {
+    return score;
+  }
+  
+  /**
+   * Returns the level.
+   * @return int level
+   */
+  public int getLevel ()
+  {
+    return level;
+  }
+  
+  /**
+   * Sets the name.
+   * @param n String
+   */
+  public void setName (String n)
+  {
+    name = n;
+  }
+  
+  /**
+   * Sets the score.
+   * @param s int
+   */
+  public void setScore (int s)
+  {
+    score = s;
+  }
+  
+  /**
+   * Sets the level.
+   * @param l int
+   */
+  public void setLevel (int l)
+  {
+    level = l;
+  }
+  
+}

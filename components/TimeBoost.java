@@ -1,0 +1,19 @@
+package hats3.components;
+
+/**
+ * This class creates an TimeBoost Objective that adds time. 
+ * @author Cindy Lian
+ * @author Jennifer Cai
+ * @version 4.0, June 10, 2013
+ */
+public class TimeBoost extends Objective
+{
+  
+  /**
+   * Creates a TimeBoost Objective with the TimeBoost image.
+   */
+  public TimeBoost ()
+  {
+    super ("hats3/Images/GameImages/timebonus.png");
+  }
+}

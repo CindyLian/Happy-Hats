@@ -1,0 +1,19 @@
+package hats3.hats;
+
+/**
+ * This class creates a Hat that looks like a Bucket.
+ * @author Cindy Lian
+ * @author Jennifer Cai
+ * @version 4.0, June 10, 2013
+ */
+public class BucketHat extends Hat
+{
+  
+  /**
+   * Creates a Hat with the BucketHat image
+   */
+  public BucketHat ()
+  {
+    super("hats3/Images/GameImages/hats/buckethat.png");
+  }
+}
